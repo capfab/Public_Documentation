@@ -1,0 +1,8 @@
+sample_code
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   sample_1
+   sample_2
