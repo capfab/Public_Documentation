@@ -1,10 +1,7 @@
-sample_code
-===========
+subsubfolder
+============
 
 .. toctree::
    :maxdepth: 4
 
-   sample_1
-   sample_2
-   sample_3
    sample_4
