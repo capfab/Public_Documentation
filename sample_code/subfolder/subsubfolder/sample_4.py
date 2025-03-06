@@ -1,3 +1,7 @@
+"""
+Recursively runs sphinx-apidoc on all subdirectories within the specified base folder.
+"""
+
 import os
 import subprocess
 
