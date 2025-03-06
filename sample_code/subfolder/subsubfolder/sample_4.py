@@ -13,7 +13,7 @@ def run_sphinx_apidoc_recursively(base_folder, output_folder):
     """
     # Run sphinx-apidoc for the current directory
     subprocess.run(
-        ["sphinx-apidoc", "-o", output_folder, base_folder],
+        ["sphinx-apidoc", "-f -o", output_folder, base_folder],
         check=True,
     )
 
