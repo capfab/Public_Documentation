@@ -10,7 +10,6 @@ import os
 import sys
 from recommonmark.parser import CommonMarkParser
 
-# sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath("../../sample_code/"))
 
 project = "Test Public Documentation"
