@@ -2,6 +2,8 @@
 Recursively runs sphinx-apidoc on all subdirectories within the specified base folder.
 """
 
+__version__ = "0.1.0"
+
 import os
 import subprocess
 
