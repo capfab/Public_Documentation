@@ -1,0 +1,6 @@
+training:
+  batch_size: 137
+  num_v_updates: 137
+  grad_pen: 137
+  lambda_gp: 137
+

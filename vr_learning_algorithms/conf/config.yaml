@@ -1,0 +1,79 @@
+general:
+  device: cuda
+  seed: 0
+
+env:
+  env_name: 'FishSwim'
+
+agent:  
+  max_steps: 100000  # Number of training steps
+  double: True  # Double Q-learning
+  actor_lr: 3e-4
+  value_lr: 3e-4
+  critic_lr: 3e-4
+  disc_lr: 3e-4
+  discount: 0.99
+  expectile: 0.8
+  actor_temperature: 0.1
+  dropout_rate: 0.1
+  layernorm: True
+  tau: 0.005
+  episode_length: 1000
+  action_repeat: 1
+  reward_gap: 0.01
+  weight_decay: 1e-4
+
+architecture:
+  hidden_dims: [256, 256]  # Example architecture for policy network
+
+training:
+  algo_name: 'BC'  # Name of the RL algorithm being used
+  batch_size: 256
+  num_v_updates: 1
+  grad_pen: 10.0
+  lambda_gp: 10.0
+  noise: 0.2
+  max_clip: 0.5
+  alpha: 2.5
+  eval_interval: 1000  # Evaluate every this many steps
+  update_Q_inference: False
+  good_reward_coeff: 1.0
+  bad_reward_coeff: 0.5
+  sample_random_times: 1
+  log_loss: False
+  noise_std: 0.0
+  v_update: False
+  clip_threshold: null  # If None, use default behavior
+
+dataset:
+  expert_dataset_size: 1000
+  dataset_path: "IL_dataset/"
+  dataset_file: "{env_name}-PPO.hdf5"
+
+logging:
+  log_interval: 100  # Log every this many steps
+  log_dir: "logs/"
+  save_interval: 5  # Save networks every this many epochs
+  use_wandb: True  # Whether to use Weights & Biases
+  wandb_project: "test_mujoco"
+  wandb_entity: "hmhuy"
+  use_tb: True  # Whether to use TensorBoard
+
+checkpoint:
+  save_path: "logs/checkpoints/"
+  resume: False  # Whether to resume training from a checkpoint
+
+evaluation:
+  num_eval_envs: 128  # Number of environments used for evaluation
+  wrap_env: False  # Whether to wrap environment for training
+  render_batch_size: null  # Only used if randomization applies
+
+experiment:
+  play_only: False  # Whether to run in play mode without training
+  suffix: null  # Optional suffix for experiment naming
+  env_name: 'FishSwim'  # Environment name (explicitly stated)
+  domain_randomization: False  # Whether to apply domain randomization
+  vision: False  # Whether vision-based features should be used
+
+defaults:
+  - algo: none

@@ -15,6 +15,19 @@ sys.path.insert(0, os.path.abspath("../../sample_code/"))
 sys.path.insert(0, os.path.abspath("../../sample_code/subfolder"))
 sys.path.insert(0, os.path.abspath("../../sample_code/subfolder/subsubfolder"))
 
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/common"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/conf"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/conf/algo"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/algos"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/algos/BC"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/dataset"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/logging"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/models"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/scripts"))
+sys.path.insert(0, os.path.abspath("../../vr_learning_algorithms/lfd/utils"))
+
 project = "MJP_VR"
 copyright = "2025, VinRobotics"
 author = "VinRobotics"
