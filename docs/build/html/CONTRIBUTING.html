@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to LfD Algorithms &mdash; Learning from Demonstration 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="sample_code" href="modules.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Learning from Demonstration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing to LfD Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of Contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-style-guide">Code Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-and-commit-guidelines">Branching and Commit Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-request-process">Pull Request Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-guidelines">Documentation Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issue-reporting">Issue Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">sample_code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Learning from Demonstration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing to LfD Algorithms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CONTRIBUTING.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="contributing-to-lfd-algorithms">
+<h1>Contributing to LfD Algorithms<a class="headerlink" href="#contributing-to-lfd-algorithms" title="Link to this heading"></a></h1>
+<p>This document outlines the guidelines for contributing to our project, including coding style, pull request requirements, documentation guidelines, and more.</p>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/unittest.mock-examples.html#getting-started" title="Python 3.13"><span class="xref myst">Getting Started</span></a></p></li>
+<li><p><a class="reference internal" href="#code-style-guide"><span class="xref myst">Code Style Guide</span></a></p></li>
+<li><p><a class="reference internal" href="#branching-and-commit-guidelines"><span class="xref myst">Branching and Commit Guidelines</span></a></p></li>
+<li><p><a class="reference internal" href="#pull-request-process"><span class="xref myst">Pull Request Process</span></a></p></li>
+<li><p><a class="reference internal" href="#testing"><span class="xref myst">Testing</span></a></p></li>
+<li><p><a class="reference internal" href="#documentation-guidelines"><span class="xref myst">Documentation Guidelines</span></a></p></li>
+<li><p><a class="reference internal" href="#issue-reporting"><span class="xref myst">Issue Reporting</span></a></p></li>
+<li><p><a class="reference internal" href="#contact"><span class="xref myst">Contact</span></a></p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>If you have been added to the project, you can clone the repository directly:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/VinRobotics/<span class="o">{</span>to-be-updated<span class="o">}</span>.git
+</pre></div>
+</div>
+<p>Otherwise, if you are contributing externally, fork the repository first, then clone your fork:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/<span class="o">{</span>to-be-updated<span class="o">}</span>.git
+</pre></div>
+</div>
+</li>
+<li><p>Navigate to the project directory:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>localLfD
+</pre></div>
+</div>
+</li>
+<li><p>Install dependencies:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.<span class="o">[</span>docs,tests,extra<span class="o">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run tests to ensure everything is set up correctly:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>WIP
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="code-style-guide">
+<h2>Code Style Guide<a class="headerlink" href="#code-style-guide" title="Link to this heading"></a></h2>
+<p>We follow the <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a> code style for Python in this project. Please adhere to the following:</p>
+<ul>
+<li><p>Use descriptive variable names following standard conventions (e.g., <code class="docutils literal notranslate"><span class="pre">snake_case</span></code> for variables and functions, <code class="docutils literal notranslate"><span class="pre">PascalCase</span></code> for classes).</p></li>
+<li><p>Since we plan to maintain API documentation, all code must follow a strict docstring format compatible with <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;[Summary]</span>
+<span class="sd">:param [ParamName]: [ParamDescription], defaults to [DefaultParamVal]</span>
+<span class="sd">:type [ParamName]: [ParamType](, optional)</span>
+<span class="sd">...</span>
+<span class="sd">:raises [ErrorType]: [ErrorDescription]</span>
+<span class="sd">...</span>
+<span class="sd">:return: [ReturnDescription]</span>
+<span class="sd">:rtype: [ReturnType]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you are using VS code, the Python Docstring extension can be used to auto-generate a docstring snippet once a function/class has been written. If you want the extension to generate docstrings in <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> format, you must set the <code class="docutils literal notranslate"><span class="pre">&quot;autoDocstring.docstringFormat&quot;:</span> <span class="pre">&quot;sphinx&quot;</span></code> setting, under File &gt; Preferences &gt; Settings.</p></li>
+<li><p>Follow <a class="reference external" href="https://peps.python.org/pep-0257/">PEP 257</a> standards and <a class="reference external" href="https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html">Sphinx and RST syntax guide</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">test_function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;This function calculates the mean of two arguments.</span>
+
+<span class="sd">  :param arg1: argument 1</span>
+<span class="sd">  :type arg1: int, float, ...</span>
+<span class="sd">  :param arg2: argument 2</span>
+<span class="sd">  :type arg2: int, float, ...</span>
+<span class="sd">  :return: mean of arg1 and arg2</span>
+<span class="sd">  :rtype: int, float, ...</span>
+
+<span class="sd">  :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; test_function(3, 5)</span>
+<span class="sd">    4</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">arg1</span> <span class="o">+</span> <span class="n">arg2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="branching-and-commit-guidelines">
+<h2>Branching and Commit Guidelines<a class="headerlink" href="#branching-and-commit-guidelines" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Use meaningful branch names: <code class="docutils literal notranslate"><span class="pre">feature/feature-name</span></code>, <code class="docutils literal notranslate"><span class="pre">bugfix/issue-number</span></code>, <code class="docutils literal notranslate"><span class="pre">hotfix/issue-number</span></code>.</p></li>
+<li><p>Write concise and descriptive commit messages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nb">type</span><span class="p">]</span> <span class="n">Short</span> <span class="n">summary</span> <span class="p">(</span><span class="nb">max</span> <span class="mi">50</span> <span class="n">chars</span><span class="p">)</span>
+
+<span class="n">Optional</span> <span class="n">detailed</span> <span class="n">description</span><span class="p">,</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">feat</span><span class="p">:</span> <span class="n">Add</span> <span class="n">ppo</span> <span class="n">wrapper</span>
+<span class="n">fix</span><span class="p">:</span> <span class="n">Resolve</span> <span class="n">issue</span> <span class="k">with</span> <span class="n">mujoco</span>
+</pre></div>
+</div>
+</li>
+<li><p>Prefix commit messages with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">feat</span></code>: New feature</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fix</span></code>: Bug fix</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs</span></code>: Documentation update</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">style</span></code>: Formatting and style changes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refactor</span></code>: Code refactoring</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code>: Adding or updating tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chore</span></code>: Maintenance tasks</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="pull-request-process">
+<h2>Pull Request Process<a class="headerlink" href="#pull-request-process" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Ensure your code follows the style guide and passes all tests.</p></li>
+<li><p>Provide a clear description of the changes.</p></li>
+<li><p>Reference related issues if applicable.</p></li>
+<li><p>If you know the right people or team that should approve your PR (and you have the required permissions to do so), add them to the Reviewers list.</p></li>
+<li><p>Each PR need to be reviewed and accepted by at least one of the maintainers (&#64;baotruyenthach, &#64;capfab, TBD).</p></li>
+<li><p>Wait for a review and address any requested changes.</p></li>
+</ol>
+<p><strong>Note: Please limit to fewer than 300 lines of code per PR. 😊</strong></p>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading"></a></h2>
+<ul>
+<li><p>Ensure all new features include unit and integration tests.</p></li>
+<li><p>Run tests before submitting a pull request:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>WIP
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="documentation-guidelines">
+<h2>Documentation Guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> if necessary.</p></li>
+<li><p>Use inline comments for complex logic.</p></li>
+<li><p>Keep documentation up to date with code changes.</p></li>
+<li><p><strong>We are working on an API documentation pipeline.</strong></p></li>
+</ul>
+</section>
+<section id="issue-reporting">
+<h2>Issue Reporting<a class="headerlink" href="#issue-reporting" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Search existing issues before opening a new one.</p></li>
+<li><p>Provide a clear title and description.</p></li>
+<li><p>Include steps to reproduce the issue, if applicable.</p></li>
+<li><p>Add relevant labels (<code class="docutils literal notranslate"><span class="pre">bug</span></code>, <code class="docutils literal notranslate"><span class="pre">enhancement</span></code>, <code class="docutils literal notranslate"><span class="pre">documentation</span></code>, etc.).</p></li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading"></a></h2>
+<p>For any questions, reach out to the maintainers.</p>
+<p>Thank you for your contributions!</p>
+<p>Credits: this contributing guide is based on <a class="reference external" href="https://github.com/araffin/sbx/blob/master/CONTRIBUTING.md">sbx</a>, following <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="README.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="sample_code" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, VinRobotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
