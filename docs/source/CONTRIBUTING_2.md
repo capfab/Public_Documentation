@@ -145,4 +145,4 @@ For any questions, reach out to the maintainers.
 
 Thank you for your contributions!
 
-Credits: this contributing guide is based on [sbx](https://github.com/araffin/sbx/blob/master/CONTRIBUTING.md), following [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
+Credits: this contributing guide is based on [sbx](https://github.com/araffin/sbx/blob/master/CONTRIBUTING.md) and [this](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html), following [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).

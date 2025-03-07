@@ -141,6 +141,8 @@ We welcome contributions! If you would like to contribute:
 - Make your changes and add tests.
 - Submit a pull request.
 
+For further information regarding contribution, please follow this [instruction](https://lfd-test.readthedocs.io/en/latest/CONTRIBUTING_2.html).
+
 ---
 
 ## 📄 License
