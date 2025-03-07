@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sample_4 module &mdash; Test Public Documentation 0.0.1 documentation</title>
+  <title>sample_4 module &mdash; Learning from Demonstration 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -18,7 +18,8 @@
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="sample_3 module" href="sample_3.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -30,7 +31,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            Test Public Documentation
+            Learning from Demonstration
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -41,9 +42,17 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">sample_code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules_2.html">sample_code/subfolder</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">sample_code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sample_1.html">sample_1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_2.html">sample_2 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_3.html">sample_3 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sample_4 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sample_4.run_sphinx_apidoc_recursively"><code class="docutils literal notranslate"><span class="pre">run_sphinx_apidoc_recursively()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -52,7 +61,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Test Public Documentation</a>
+          <a href="index.html">Learning from Demonstration</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -60,6 +69,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">sample_code</a></li>
       <li class="breadcrumb-item active">sample_4 module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/sample_4.rst.txt" rel="nofollow"> View page source</a>
@@ -70,14 +80,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sample-4-module">
-<h1>sample_4 module<a class="headerlink" href="#sample-4-module" title="Link to this heading"></a></h1>
+  <section id="module-sample_4">
+<span id="sample-4-module"></span><h1>sample_4 module<a class="headerlink" href="#module-sample_4" title="Link to this heading"></a></h1>
+<p>Recursively runs sphinx-apidoc on all subdirectories within the specified base folder.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="sample_4.run_sphinx_apidoc_recursively">
+<span class="sig-prename descclassname"><span class="pre">sample_4.</span></span><span class="sig-name descname"><span class="pre">run_sphinx_apidoc_recursively</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_folder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_folder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sample_4.run_sphinx_apidoc_recursively" title="Link to this definition"></a></dt>
+<dd><p>Recursively runs sphinx-apidoc on all subdirectories within the specified base folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base_folder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The root directory containing the Python modules.</p></li>
+<li><p><strong>output_folder</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a>) – The directory where the generated rst files should be placed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sample_3.html" class="btn btn-neutral float-left" title="sample_3 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

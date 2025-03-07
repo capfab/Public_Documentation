@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sample_3 module &mdash; Test Public Documentation 0.0.1 documentation</title>
+  <title>sample_3 module &mdash; Learning from Demonstration 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
@@ -19,7 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="sample_code/subfolder" href="modules_2.html" /> 
+    <link rel="next" title="sample_4 module" href="sample_4.html" />
+    <link rel="prev" title="sample_2 module" href="sample_2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,7 +32,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            Test Public Documentation
+            Learning from Demonstration
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -43,9 +44,16 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="modules.html">sample_code</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules_2.html">sample_code/subfolder</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">sample_3 module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">sample_code</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sample_1.html">sample_1 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sample_2.html">sample_2 module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">sample_3 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sample_3.SpiceSelectionError"><code class="docutils literal notranslate"><span class="pre">SpiceSelectionError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample_3.select_spices"><code class="docutils literal notranslate"><span class="pre">select_spices()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample_3.weighted_average"><code class="docutils literal notranslate"><span class="pre">weighted_average()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sample_4.html">sample_4 module</a></li>
 </ul>
 </li>
 </ul>
@@ -56,7 +64,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Test Public Documentation</a>
+          <a href="index.html">Learning from Demonstration</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -64,7 +72,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules_2.html">sample_code/subfolder</a></li>
+          <li class="breadcrumb-item"><a href="modules.html">sample_code</a></li>
       <li class="breadcrumb-item active">sample_3 module</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/sample_3.rst.txt" rel="nofollow"> View page source</a>
@@ -75,15 +83,72 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sample-3-module">
-<h1>sample_3 module<a class="headerlink" href="#sample-3-module" title="Link to this heading"></a></h1>
+  <section id="module-sample_3">
+<span id="sample-3-module"></span><h1>sample_3 module<a class="headerlink" href="#module-sample_3" title="Link to this heading"></a></h1>
+<dl class="py exception">
+<dt class="sig sig-object py" id="sample_3.SpiceSelectionError">
+<em class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sample_3.</span></span><span class="sig-name descname"><span class="pre">SpiceSelectionError</span></span><a class="headerlink" href="#sample_3.SpiceSelectionError" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>Exception raised when an invalid category is provided.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sample_3.select_spices">
+<span class="sig-prename descclassname"><span class="pre">sample_3.</span></span><span class="sig-name descname"><span class="pre">select_spices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sample_3.select_spices" title="Link to this definition"></a></dt>
+<dd><p>Return a list of randomly selected spices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><em>str</em></a><em>] or </em><em>None</em>) – Optional category of spices.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#sample_3.SpiceSelectionError" title="sample_3.SpiceSelectionError"><strong>SpiceSelectionError</strong></a> – If the category is invalid.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of selected spices.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)">list</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="sample_3.weighted_average">
+<span class="sig-prename descclassname"><span class="pre">sample_3.</span></span><span class="sig-name descname"><span class="pre">weighted_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#sample_3.weighted_average" title="Link to this definition"></a></dt>
+<dd><p>Compute the weighted average of a list of values.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>values</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – A list of numerical values.</p></li>
+<li><p><strong>weights</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – A list of weights corresponding to each value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the lists have different lengths or contain invalid elements.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The weighted average of the values.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">weighted_average</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+<span class="go">5.2</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="modules_2.html" class="btn btn-neutral float-left" title="sample_code/subfolder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sample_2.html" class="btn btn-neutral float-left" title="sample_2 module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sample_4.html" class="btn btn-neutral float-right" title="sample_4 module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
