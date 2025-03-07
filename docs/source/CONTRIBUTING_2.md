@@ -18,13 +18,13 @@ This document outlines the guidelines for contributing to our project, including
 1. If you have been added to the project, you can clone the repository directly:
 
    ```sh
-   git clone https://github.com/VinRobotics/{to-be-updated}.git
+   git clone https://github.com/VinRobotics/vr_learning_algorithms.git
    ```
 
    Otherwise, if you are contributing externally, fork the repository first, then clone your fork:
 
    ```sh
-   git clone https://github.com/your-username/{to-be-updated}.git
+   git clone https://github.com/VinRobotics/vr_learning_algorithms.git
    ```
 
 2. Navigate to the project directory:

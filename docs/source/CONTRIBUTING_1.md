@@ -19,7 +19,7 @@
 
 `vr_learning_algorithms` is a Python package developed by **VinRobotics** that provides implementations of Reinforcement Learning (RL) and Learning from Demonstration (LfD) algorithms for robotic applications. The package is designed to be modular and extensible, making it easy to develop, test, and integrate new learning algorithms into robotic systems.
 
-## Project Structure
+## 📂 Project Structure
 
 - **`vr_learning_algorithms/`**: Core package containing RL and LfD implementations.
   - **`common/`**: Shared utilities and helper functions for both RL and LfD algorithm implementations.
@@ -41,19 +41,19 @@
 
 ---
 
-## `algos` Folder Structure
+## 📂 `algos` Folder Structure
 - `base_offline_algo.py` defines the base algorithm, enforcing mandatory methods and attributes using the Abstract Base Class (ABC). This ensures a standardized algorithm interface.
 - Each algorithm should have its own dedicated folder containing all algorithm-specific implementations (e.g.,`BC`)
 - The `logging` folder also follows the ABC pattern.
 
 ---
 
-## `models` Folder Structure
+## 📂 `models` Folder Structure
 - All neural network architectures and their utilities must be placed here.
 
 ---
 
-## Example Commands
+## 🛠 Example Commands
 -  Run example jax BC script using default configs:
 
 `python lfd/scripts/train_jax_bc_bao.py`
@@ -65,17 +65,17 @@
 ---
 
 
-## Installation
+## 🚀 Installation
 
 You can install the package using the following steps:
 
-### Clone the repository
+### 1️⃣ Clone the repository
 ```bash
  git clone https://github.com/VinRobotics/vr_learning_algorithms.git
  cd vr_learning_algorithms
 ```
 
-### Install the package
+### 2️⃣ Install the package
 <!-- ```bash
  pip install -e .
 ``` -->
@@ -90,14 +90,14 @@ source .venv/bin/activate  # On Unix/macOS
 # .venv\Scripts\activate  # On Windows
 ```
 
-Install `vr_learning_algorithms`:
+Install 🤗 `vr_learning_algorithms`:
 ```bash
 uv pip install -e .
 ```
 
 This will install the package in editable mode, allowing you to make modifications without reinstalling.
 
-### Set up pre-commit hooks (Optional but recommended)
+### 3️⃣ Set up pre-commit hooks (Optional but recommended)
 
 To ensure code quality and compliance with formatting guidelines, enable **pre-commit** hooks:
 
@@ -110,7 +110,7 @@ This will automatically run checks before committing code.
 
 ---
 
-## Example Usage
+## 🛠 Example Usage
 
 Here's a simple example of how to train a behavior cloning (BC) model using this package:
 
@@ -134,7 +134,7 @@ For more detailed examples, refer to the `tests/` directory.
 
 ---
 
-## Contributing
+## 📝 Contributing
 We welcome contributions! If you would like to contribute:
 - Fork the repository.
 - Create a feature branch.
@@ -143,10 +143,10 @@ We welcome contributions! If you would like to contribute:
 
 ---
 
-## License
+## 📄 License
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
 ---
 
-## Contact
+## 📧 Contact
 For inquiries or support, reach out to **VinRobotics** at [contact@vinrobotics.com](mailto:contact@vinrobotics.com).
