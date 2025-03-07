@@ -15,5 +15,4 @@ documentation for details.
    :caption: Contents:
 
    README.md
-   CONTRIBUTING.md
    modules
