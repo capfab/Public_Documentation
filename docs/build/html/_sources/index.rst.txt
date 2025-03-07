@@ -3,17 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Learning from Demonstration documentation
-=======================================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+MJP_VR: Reinforcement Learning and Learning from Demonstration for Robotics
+===========================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   README.md
-   CONTRIBUTING.md
+   CONTRIBUTING_1
+   CONTRIBUTING_2
    modules

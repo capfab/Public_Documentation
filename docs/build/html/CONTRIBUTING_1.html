@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; MJP_VR 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d45e8c67"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing to LfD Algorithms" href="CONTRIBUTING_2.html" />
+    <link rel="prev" title="MJP_VR: Reinforcement Learning and Learning from Demonstration for Robotics" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MJP_VR
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#algos-folder-structure"><code class="docutils literal notranslate"><span class="pre">algos</span></code> Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#models-folder-structure"><code class="docutils literal notranslate"><span class="pre">models</span></code> Folder Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-commands">Example Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clone-the-repository">Clone the repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-package">Install the package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-pre-commit-hooks-optional-but-recommended">Set up pre-commit hooks (Optional but recommended)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage">Example Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING_2.html">Contributing to LfD Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">sample_code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MJP_VR</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CONTRIBUTING_1.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<p><strong>Reinforcement Learning and Learning from Demonstration for Robotics</strong></p>
+<div align="center">
+<p><a class="reference external" href="https://lfd-test.readthedocs.io/en/latest/"><img alt="Documentation Status" src="https://readthedocs.org/projects/lfd-test/badge/?version=latest" /></a>
+<a class="reference external" href="https://github.com/huggingface/lerobot/actions/workflows/nightly-tests.yml?query=branch%3Amain"><img alt="Tests" src="https://github.com/huggingface/lerobot/actions/workflows/nightly-tests.yml/badge.svg?branch=main" /></a>
+<a class="reference external" href="https://codecov.io/gh/huggingface/lerobot"><img alt="Coverage" src="https://codecov.io/gh/huggingface/lerobot/branch/main/graph/badge.svg?token=TODO" /></a>
+<a class="reference external" href="https://www.python.org/downloads/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/lerobot" /></a>
+<a class="reference external" href="https://github.com/huggingface/lerobot/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
+<a class="reference external" href="https://pypi.org/project/lerobot/"><img alt="Status" src="https://img.shields.io/pypi/status/lerobot" /></a>
+<a class="reference external" href="https://pypi.org/project/lerobot/"><img alt="Version" src="https://img.shields.io/pypi/v/lerobot" /></a>
+<a class="reference external" href="https://github.com/huggingface/lerobot/tree/main/examples"><img alt="Examples" src="https://img.shields.io/badge/Examples-green.svg" /></a>
+<a class="reference external" href="https://github.com/huggingface/lerobot/blob/main/CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg" /></a>
+<a class="reference external" href="https://discord.gg/s3KuuzsPFb"><img alt="Discord" src="https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat" /></a></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">vr_learning_algorithms</span></code> is a Python package developed by <strong>VinRobotics</strong> that provides implementations of Reinforcement Learning (RL) and Learning from Demonstration (LfD) algorithms for robotic applications. The package is designed to be modular and extensible, making it easy to develop, test, and integrate new learning algorithms into robotic systems.</p>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">vr_learning_algorithms/</span></code></strong>: Core package containing RL and LfD implementations.</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">common/</span></code></strong>: Shared utilities and helper functions for both RL and LfD algorithm implementations.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">config/</span></code></strong>: Configuration files for different learning algorithms.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">lfd/</span></code></strong>: Learning from Demonstration (LfD) algorithms.</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">algos/</span></code></strong>: Different LfD algorithms.</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">BC/</span></code></strong>: Behavior Cloning (BC) implementation (<code class="docutils literal notranslate"><span class="pre">bc.py</span></code>).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">base_offline_algo.py</span></code></strong>: Base class for offline learning algorithms.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">base_online_algo.py</span></code></strong>: Base class for online learning algorithms.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">scripts/</span></code></strong>: All scripts to interface the algorithms with MJX environments.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dataset/</span></code></strong>: Data loader, pre-processing, and handling for LfD and RL.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">logging/</span></code></strong>: Logging utilities for experiment tracking. Currently includes logging evaluation metrics, checkpoints, anh yaml config files.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">models/</span></code></strong>: Pre-trained models and neural network architectures.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">utils/</span></code></strong>: General utility functions for LfD.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">tests/</span></code></strong>: Unit tests to validate the correctness of the implementation.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">.pre-commit-config.yaml</span></code></strong>: Configuration for pre-commit hooks.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">setup.py</span></code></strong>: Installation script for the package.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">README.md</span></code></strong>: This documentation file.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="algos-folder-structure">
+<h2><code class="docutils literal notranslate"><span class="pre">algos</span></code> Folder Structure<a class="headerlink" href="#algos-folder-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">base_offline_algo.py</span></code> defines the base algorithm, enforcing mandatory methods and attributes using the Abstract Base Class (ABC). This ensures a standardized algorithm interface.</p></li>
+<li><p>Each algorithm should have its own dedicated folder containing all algorithm-specific implementations (e.g.,<code class="docutils literal notranslate"><span class="pre">BC</span></code>)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">logging</span></code> folder also follows the ABC pattern.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="models-folder-structure">
+<h2><code class="docutils literal notranslate"><span class="pre">models</span></code> Folder Structure<a class="headerlink" href="#models-folder-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>All neural network architectures and their utilities must be placed here.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="example-commands">
+<h2>Example Commands<a class="headerlink" href="#example-commands" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run example jax BC script using default configs:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">lfd/scripts/train_jax_bc_bao.py</span></code></p>
+<ul class="simple">
+<li><p>Overwrite default configs with algorithm-specific configs:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">lfd/scripts/train_jax_bc_bao.py</span> <span class="pre">algo=bc</span></code></p>
+<ul class="simple">
+<li><p>This will use additional configurations from <code class="docutils literal notranslate"><span class="pre">lfd/conf/algo/bc.yaml</span></code>. It overwrites predefined configurations in the default file if the same parameters are also defined in <code class="docutils literal notranslate"><span class="pre">bc.yaml</span></code>. Any configurations not specified in <code class="docutils literal notranslate"><span class="pre">bc.yaml</span></code> will be inherited from the default configuration file.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>You can install the package using the following steps:</p>
+<section id="clone-the-repository">
+<h3>Clone the repository<a class="headerlink" href="#clone-the-repository" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/VinRobotics/vr_learning_algorithms.git
+<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>vr_learning_algorithms
+</pre></div>
+</div>
+</section>
+<section id="install-the-package">
+<h3>Install the package<a class="headerlink" href="#install-the-package" title="Link to this heading"></a></h3>
+<!-- ```bash
+ pip install -e .
+``` -->
+<p>Create a virtual environment with Python 3.10 and activate it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install uv if you haven&#39;t already</span>
+curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+
+<span class="c1"># Create and activate virtual environment with Python 3.10</span>
+uv<span class="w"> </span>venv<span class="w"> </span>.venv<span class="w"> </span>--python<span class="o">=</span><span class="m">3</span>.10
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w">  </span><span class="c1"># On Unix/macOS</span>
+<span class="c1"># .venv\Scripts\activate  # On Windows</span>
+</pre></div>
+</div>
+<p>Install <code class="docutils literal notranslate"><span class="pre">vr_learning_algorithms</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<p>This will install the package in editable mode, allowing you to make modifications without reinstalling.</p>
+</section>
+<section id="set-up-pre-commit-hooks-optional-but-recommended">
+<h3>Set up pre-commit hooks (Optional but recommended)<a class="headerlink" href="#set-up-pre-commit-hooks-optional-but-recommended" title="Link to this heading"></a></h3>
+<p>To ensure code quality and compliance with formatting guidelines, enable <strong>pre-commit</strong> hooks:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+<p>This will automatically run checks before committing code.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="example-usage">
+<h2>Example Usage<a class="headerlink" href="#example-usage" title="Link to this heading"></a></h2>
+<p>Here’s a simple example of how to train a behavior cloning (BC) model using this package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">vr_learning_algorithms.lfd.algos.BC</span><span class="w"> </span><span class="kn">import</span> <span class="n">BC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">vr_learning_algorithms.dataset</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataLoader</span>
+
+<span class="c1"># Load dataset</span>
+<span class="n">data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="s2">&quot;path/to/dataset&quot;</span><span class="p">)</span>
+<span class="n">train_data</span><span class="p">,</span> <span class="n">val_data</span> <span class="o">=</span> <span class="n">data_loader</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+<span class="c1"># Initialize and train BC model</span>
+<span class="n">bc_model</span> <span class="o">=</span> <span class="n">BC</span><span class="p">()</span>
+<span class="n">bc_model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+
+<span class="c1"># Save trained model</span>
+<span class="n">bc_model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;bc_model.pth&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more detailed examples, refer to the <code class="docutils literal notranslate"><span class="pre">tests/</span></code> directory.</p>
+</section>
+<hr class="docutils" />
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h2>
+<p>We welcome contributions! If you would like to contribute:</p>
+<ul class="simple">
+<li><p>Fork the repository.</p></li>
+<li><p>Create a feature branch.</p></li>
+<li><p>Make your changes and add tests.</p></li>
+<li><p>Submit a pull request.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading"></a></h2>
+<p>This project is licensed under the <strong>MIT License</strong>. See the <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file for details.</p>
+</section>
+<hr class="docutils" />
+<section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading"></a></h2>
+<p>For inquiries or support, reach out to <strong>VinRobotics</strong> at <a class="reference external" href="mailto:contact&#37;&#52;&#48;vinrobotics&#46;com">contact<span>&#64;</span>vinrobotics<span>&#46;</span>com</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="MJP_VR: Reinforcement Learning and Learning from Demonstration for Robotics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="CONTRIBUTING_2.html" class="btn btn-neutral float-right" title="Contributing to LfD Algorithms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, VinRobotics.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

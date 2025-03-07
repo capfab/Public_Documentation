@@ -1,4 +1,6 @@
-# MJP_VR: Reinforcement Learning and Learning from Demonstration for Robotics
+# Introduction
+
+**Reinforcement Learning and Learning from Demonstration for Robotics**
 
 <div align="center">
 
