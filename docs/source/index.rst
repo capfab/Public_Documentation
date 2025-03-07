@@ -11,6 +11,8 @@ Add your content using ``reStructuredText`` syntax. See the
 documentation for details.
 
 .. include:: README.md
+   :parser: myst_parser
+
 
 .. toctree::
    :maxdepth: 2
