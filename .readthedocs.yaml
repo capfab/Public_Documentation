@@ -4,7 +4,7 @@
 
 # Required
 version: 2
-formats: [htmlzip, pdf]
+formats: [htmlzip]
 
 # Set the version of Python and other tools you might need
 build:

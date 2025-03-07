@@ -14,5 +14,6 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+   README.md
    CONTRIBUTING.md
    modules
