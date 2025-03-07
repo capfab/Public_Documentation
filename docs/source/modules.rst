@@ -9,3 +9,6 @@ sample_code
    sample_3
    sample_4
    sample_5
+   sample_6
+   sample_7
+   sample_bc

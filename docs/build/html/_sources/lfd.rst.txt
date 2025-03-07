@@ -1,0 +1,18 @@
+lfd package
+===========
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   lfd.utils
+
+Module contents
+---------------
+
+.. automodule:: lfd
+   :members:
+   :show-inheritance:
+   :undoc-members:

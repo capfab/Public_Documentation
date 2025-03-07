@@ -1,3 +1,15 @@
+import os
+import time
+from functools import partial
+from typing import Optional, Sequence, Tuple
+
+import jax
+import jax.numpy as jnp
+import numpy as np
+import optax
+import wandb
+from jax.debug import print
+
 def exponentiate(base: float, exponent: float) -> float:
     """
     Compute the exponentiation of a number.

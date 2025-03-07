@@ -34,7 +34,10 @@ def run_sphinx_apidoc_recursively(base_folder, output_folder):
 
 
 if __name__ == "__main__":
-    BASE_FOLDER = "sample_code"
+    # BASE_FOLDER = "sample_code"
+    BASE_FOLDER = (
+        "F:/University of Pennsylvania/VR/vr_learning_algorithms/vr_learning_algorithms"
+    )
     OUTPUT_FOLDER = "docs/source"
 
     run_sphinx_apidoc_recursively(BASE_FOLDER, OUTPUT_FOLDER)
