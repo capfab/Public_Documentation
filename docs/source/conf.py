@@ -12,7 +12,7 @@ from recommonmark.parser import CommonMarkParser
 
 sys.path.insert(0, os.path.abspath("../../sample_code/"))
 
-project = "Test Public Documentation"
+project = "Learning from Demonstration"
 copyright = "2025, VinRobotics"
 author = "VinRobotics"
 release = "0.0.1"
