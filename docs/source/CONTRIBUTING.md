@@ -1,148 +1,150 @@
-# Contributing to LfD Algorithms
+# MJP_VR: Reinforcement Learning and Learning from Demonstration for Robotics
 
-This document outlines the guidelines for contributing to our project, including coding style, pull request requirements, documentation guidelines, and more.
+<div align="center">
 
-## Table of Contents
+[![Documentation Status](https://readthedocs.org/projects/lfd-test/badge/?version=latest)](https://lfd-test.readthedocs.io/en/latest/)
+[![Tests](https://github.com/huggingface/lerobot/actions/workflows/nightly-tests.yml/badge.svg?branch=main)](https://github.com/huggingface/lerobot/actions/workflows/nightly-tests.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/huggingface/lerobot/branch/main/graph/badge.svg?token=TODO)](https://codecov.io/gh/huggingface/lerobot)
+[![Python versions](https://img.shields.io/pypi/pyversions/lerobot)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/huggingface/lerobot/blob/main/LICENSE)
+[![Status](https://img.shields.io/pypi/status/lerobot)](https://pypi.org/project/lerobot/)
+[![Version](https://img.shields.io/pypi/v/lerobot)](https://pypi.org/project/lerobot/)
+[![Examples](https://img.shields.io/badge/Examples-green.svg)](https://github.com/huggingface/lerobot/tree/main/examples)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](https://github.com/huggingface/lerobot/blob/main/CODE_OF_CONDUCT.md)
+[![Discord](https://dcbadge.vercel.app/api/server/C5P34WJ68S?style=flat)](https://discord.gg/s3KuuzsPFb)
 
-- [Getting Started](#getting-started)
-- [Code Style Guide](#code-style-guide)
-- [Branching and Commit Guidelines](#branching-and-commit-guidelines)
-- [Pull Request Process](#pull-request-process)
-- [Testing](#testing)
-- [Documentation Guidelines](#documentation-guidelines)
-- [Issue Reporting](#issue-reporting)
-- [Contact](#contact)
+</div>
 
-## Getting Started
+`vr_learning_algorithms` is a Python package developed by **VinRobotics** that provides implementations of Reinforcement Learning (RL) and Learning from Demonstration (LfD) algorithms for robotic applications. The package is designed to be modular and extensible, making it easy to develop, test, and integrate new learning algorithms into robotic systems.
 
-1. If you have been added to the project, you can clone the repository directly:
+## Project Structure
 
-   ```sh
-   git clone https://github.com/VinRobotics/{to-be-updated}.git
-   ```
+- **`vr_learning_algorithms/`**: Core package containing RL and LfD implementations.
+  - **`common/`**: Shared utilities and helper functions for both RL and LfD algorithm implementations.
+  - **`config/`**: Configuration files for different learning algorithms.
+  - **`lfd/`**: Learning from Demonstration (LfD) algorithms.
+    - **`algos/`**: Different LfD algorithms.
+      - **`BC/`**: Behavior Cloning (BC) implementation (`bc.py`).
+      - **`base_offline_algo.py`**: Base class for offline learning algorithms.
+      - **`base_online_algo.py`**: Base class for online learning algorithms.
+    - **`scripts/`**: All scripts to interface the algorithms with MJX environments.
+    - **`dataset/`**: Data loader, pre-processing, and handling for LfD and RL.
+    - **`logging/`**: Logging utilities for experiment tracking. Currently includes logging evaluation metrics, checkpoints, anh yaml config files.
+    - **`models/`**: Pre-trained models and neural network architectures.
+    - **`utils/`**: General utility functions for LfD.
+- **`tests/`**: Unit tests to validate the correctness of the implementation.
+- **`.pre-commit-config.yaml`**: Configuration for pre-commit hooks.
+- **`setup.py`**: Installation script for the package.
+- **`README.md`**: This documentation file.
 
-   Otherwise, if you are contributing externally, fork the repository first, then clone your fork:
+---
 
-   ```sh
-   git clone https://github.com/your-username/{to-be-updated}.git
-   ```
+## `algos` Folder Structure
+- `base_offline_algo.py` defines the base algorithm, enforcing mandatory methods and attributes using the Abstract Base Class (ABC). This ensures a standardized algorithm interface.
+- Each algorithm should have its own dedicated folder containing all algorithm-specific implementations (e.g.,`BC`)
+- The `logging` folder also follows the ABC pattern.
 
-2. Navigate to the project directory:
-   ```sh
-   cd localLfD
-   ```
-3. Install dependencies:
-   ```sh
-   pip install -e .[docs,tests,extra]
-   ```
-4. Run tests to ensure everything is set up correctly:
-   ```sh
-   WIP
-   ```
+---
 
-## Code Style Guide
+## `models` Folder Structure
+- All neural network architectures and their utilities must be placed here.
 
-We follow the [Black](https://black.readthedocs.io/en/stable/) code style for Python in this project. Please adhere to the following:
+---
 
-- Use descriptive variable names following standard conventions (e.g., `snake_case` for variables and functions, `PascalCase` for classes).
-- Since we plan to maintain API documentation, all code must follow a strict docstring format compatible with `Sphinx`.
-  ```python
-  """[Summary]
-  :param [ParamName]: [ParamDescription], defaults to [DefaultParamVal]
-  :type [ParamName]: [ParamType](, optional)
-  ...
-  :raises [ErrorType]: [ErrorDescription]
-  ...
-  :return: [ReturnDescription]
-  :rtype: [ReturnType]
-  """
-  ```
-- If you are using VS code, the Python Docstring extension can be used to auto-generate a docstring snippet once a function/class has been written. If you want the extension to generate docstrings in `Sphinx` format, you must set the `"autoDocstring.docstringFormat": "sphinx"` setting, under File > Preferences > Settings.
-- Follow [PEP 257](https://peps.python.org/pep-0257/) standards and [Sphinx and RST syntax guide](https://thomas-cokelaer.info/tutorials/sphinx/docstring_python.html):
+## Example Commands
+-  Run example jax BC script using default configs:
 
-  ```python
-  def test_function(arg1, arg2):
-    """This function calculates the mean of two arguments.
+`python lfd/scripts/train_jax_bc_bao.py`
+- Overwrite default configs with algorithm-specific configs:
 
-    :param arg1: argument 1
-    :type arg1: int, float, ...
-    :param arg2: argument 2
-    :type arg2: int, float, ...
-    :return: mean of arg1 and arg2
-    :rtype: int, float, ...
+`python lfd/scripts/train_jax_bc_bao.py algo=bc`
 
-    :Example:
+- This will use additional configurations from `lfd/conf/algo/bc.yaml`. It overwrites predefined configurations in the default file if the same parameters are also defined in `bc.yaml`. Any configurations not specified in `bc.yaml` will be inherited from the default configuration file.
+---
 
-      >>> test_function(3, 5)
-      4
-    """
-    return (arg1 + arg2) / 2
-  ```
 
-## Branching and Commit Guidelines
+## Installation
 
-- Use meaningful branch names: `feature/feature-name`, `bugfix/issue-number`, `hotfix/issue-number`.
-- Write concise and descriptive commit messages:
+You can install the package using the following steps:
 
-  ```
-  [type] Short summary (max 50 chars)
+### Clone the repository
+```bash
+ git clone https://github.com/VinRobotics/vr_learning_algorithms.git
+ cd vr_learning_algorithms
+```
 
-  Optional detailed description, if necessary.
-  ```
+### Install the package
+<!-- ```bash
+ pip install -e .
+``` -->
+Create a virtual environment with Python 3.10 and activate it:
+```bash
+# Install uv if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
 
-  Example:
+# Create and activate virtual environment with Python 3.10
+uv venv .venv --python=3.10
+source .venv/bin/activate  # On Unix/macOS
+# .venv\Scripts\activate  # On Windows
+```
 
-  ```
-  feat: Add ppo wrapper
-  fix: Resolve issue with mujoco
-  ```
+Install `vr_learning_algorithms`:
+```bash
+uv pip install -e .
+```
 
-- Prefix commit messages with:
-  - `feat`: New feature
-  - `fix`: Bug fix
-  - `docs`: Documentation update
-  - `style`: Formatting and style changes
-  - `refactor`: Code refactoring
-  - `test`: Adding or updating tests
-  - `chore`: Maintenance tasks
+This will install the package in editable mode, allowing you to make modifications without reinstalling.
 
-## Pull Request Process
+### Set up pre-commit hooks (Optional but recommended)
 
-1. Ensure your code follows the style guide and passes all tests.
-2. Provide a clear description of the changes.
-3. Reference related issues if applicable.
-4. If you know the right people or team that should approve your PR (and you have the required permissions to do so), add them to the Reviewers list.
-5. Each PR need to be reviewed and accepted by at least one of the maintainers (@baotruyenthach, @capfab, TBD).
-6. Wait for a review and address any requested changes.
+To ensure code quality and compliance with formatting guidelines, enable **pre-commit** hooks:
 
-**Note: Please limit to fewer than 300 lines of code per PR. 😊**
+```bash
+pip install pre-commit
+pre-commit install
+```
 
-## Testing
+This will automatically run checks before committing code.
 
-- Ensure all new features include unit and integration tests.
-- Run tests before submitting a pull request:
-  ```sh
-  WIP
-  ```
+---
 
-## Documentation Guidelines
+## Example Usage
 
-- Update the `README.md` if necessary.
-- Use inline comments for complex logic.
-- Keep documentation up to date with code changes.
-- **We are working on an API documentation pipeline.**
+Here's a simple example of how to train a behavior cloning (BC) model using this package:
 
-## Issue Reporting
+```python
+from vr_learning_algorithms.lfd.algos.BC import BC
+from vr_learning_algorithms.dataset import DataLoader
 
-- Search existing issues before opening a new one.
-- Provide a clear title and description.
-- Include steps to reproduce the issue, if applicable.
-- Add relevant labels (`bug`, `enhancement`, `documentation`, etc.).
+# Load dataset
+data_loader = DataLoader("path/to/dataset")
+train_data, val_data = data_loader.load()
+
+# Initialize and train BC model
+bc_model = BC()
+bc_model.train(train_data)
+
+# Save trained model
+bc_model.save("bc_model.pth")
+```
+
+For more detailed examples, refer to the `tests/` directory.
+
+---
+
+## Contributing
+We welcome contributions! If you would like to contribute:
+- Fork the repository.
+- Create a feature branch.
+- Make your changes and add tests.
+- Submit a pull request.
+
+---
+
+## License
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
 
 ## Contact
-
-For any questions, reach out to the maintainers.
-
-Thank you for your contributions!
-
-Credits: this contributing guide is based on [sbx](https://github.com/araffin/sbx/blob/master/CONTRIBUTING.md), following [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
+For inquiries or support, reach out to **VinRobotics** at [contact@vinrobotics.com](mailto:contact@vinrobotics.com).
