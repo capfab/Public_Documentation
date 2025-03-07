@@ -1,4 +1,4 @@
-vr_learning_algorithms
+API
 ======================
 
 .. toctree::
